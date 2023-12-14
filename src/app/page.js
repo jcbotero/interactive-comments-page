@@ -94,38 +94,52 @@ let update = () => {
 // section incremento/decremento de numero con botones
 
 const [ incremento , setIncremento] = useState()
-const [ sumOne , setsumOne] = useState()
+const [ increRepli , setIncreReplicas] = useState()
 
 
 
-const increment = () => {
-  document.getElementById("score").style.display = "none"
+let increment = score => {
+    comentarios.map(comentarios => {
+      
+      if (comentarios.score == comentarios) {
+        return { ...comentarios, score: comentarios.score + 1};
+      }
+
+    })
+
 }
    
 
-// mirar ultimo fav.. creo tiene la respuesta
+// falta cuadrar algo en la parte del return
 
   return (
     <main className={styles.main}>
         <section className={styles.MainComments}>
-        {comentarios?.map( (comentarios, index, btn ) =>
-                <div id='index'  key={index} onClick={() =>  setNewreplica(index)  } > {/* asi puedo rendirzar un nuevo div al darle click a un elemento mapeado, dentro de un usestate paso el index del div, para que me agarre solo ese div, y abajo en el  index === newReplica ? , hago el renderizado */}
+        {comentarios?.map( (comentarios, index ) =>
+                <div id='index'  key={index} onClick={() => { setNewreplica(index);  setIncremento(index) } } > {/* asi puedo rendirzar un nuevo div al darle click a un elemento mapeado, dentro de un usestate paso el index del div, para que me agarre solo ese div, y abajo en el  index === newReplica ? , hago el renderizado */}
                   <article className={styles.comentariosSti}>
-                    <div  key={btn} className={styles.buttonScore}>                                                          {/* si quiero que me borre el div al darle click a otro elemento mapeado debo poner asi  = onClick={() => newReplica === index ? setnewReplica(undefined) : setListIndex(index)} */}           
-                          <button  className={styles.plus}  onClick={ () => { 
-                            setIncremento(index)
-                          
-                          }} >+</button>
+                    <div   className={styles.buttonScore}>                                                          {/* si quiero que me borre el div al darle click a otro elemento mapeado debo poner asi  = onClick={() => newReplica === index ? setnewReplica(undefined) : setListIndex(index)} */}           
+                          <button  className={styles.plus}  onClick={ () => {                 
                             { (() => {   if ( index === incremento) {
-                                scorebtn.current.value =  4
 
+                            comentarios.score = Number(comentarios.score) + 1 
+                              
                             } else { }
          
-                             })()}  {/* este conditional sale del usestate que toma el index del div al darle click... y me suma 1 al score de ese div , mostrando un nuevo input*/}
-                           
-                         
-                          <h2 id='score' ref={scorebtn} >{ comentarios.score}</h2>
-                          <button className={styles.minus}>-</button>
+                             })()}  {/* este conditional sale del usestate que toma el index del div al darle click... y me suma 1 al score de ese div , adicionando 1 al input*/}
+  
+                            }} >+</button>
+                          <h2 id='score'>{comentarios.score}</h2>
+                          <button className={styles.minus}onClick={ () => {                 
+                            { (() => {   if ( index === incremento) {
+
+                            comentarios.score = Number(comentarios.score) - 1 
+                              
+                            } else { }
+         
+                             })()}  {/* este conditional sale del usestate que toma el index del div al darle click... y me resta 1 al score de ese div , adicionando 1 al input*/}
+  
+                            }} >-</button>
                     </div> 
                     <div>  
                              <div className={styles.comentariosTop}>
@@ -150,7 +164,7 @@ const increment = () => {
                                                       },
                                                       username: "juliusomo"
                                                 }}) 
-                                              editNewC }
+                                                }
                                               }  >edit</button>
                                               <button className={styles.deleteBtn} onClick={ () => {
                                                 comments.pop({
@@ -220,9 +234,29 @@ const increment = () => {
                              <ul key={id} >
                                <section id='reply' className={styles.comentariosSti}>      
                                  <div className={styles.buttonScore}>
-                                     <button className={styles.plus}>+</button>
+                                     <button className={styles.plus} onClick={ () => {  
+                                                       
+                                        { (() => {   if ( index === incremento) {
+
+                                        replies.score = Number(replies.score) + 1 
+                                          
+                                        } else { }
+                    
+                                        })()}  {/* este conditional sale del usestate que toma el index del div al darle click... y me suma 1 al score de ese div , adicionando 1 al input*/}
+              
+                                        }} >+</button>
                                      <h2>{replies.score}</h2>
-                                     <button className={styles.minus}>-</button> 
+                                     <button className={styles.minus} onClick={ () => {  
+                                                       
+                                                       { (() => {   if ( index === incremento) {
+               
+                                                       replies.score = Number(replies.score) - 1 
+                                                         
+                                                       } else { }
+                                   
+                                                       })()}  {/* este conditional sale del usestate que toma el index del div al darle click... y me suma 1 al score de ese div , adicionando 1 al input*/}
+                             
+                                        }} >- </button>
                                  </div>
                                  <div>
                                       <div>
