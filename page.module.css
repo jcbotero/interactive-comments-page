@@ -1,0 +1,434 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6rem 18.5rem;
+  min-height: 100vh;
+  background-color:   hsl(228, 33%, 97%)
+}
+
+.main button:hover {
+  cursor: url("/pointer.png"), auto;
+}
+
+.buttonScore h2:hover, .updateBtn:hover, .replyBtn:hover, #delete:hover, #edit:hover, .deleteBtn:hover, .editBtn:hover, .PublishBtn button:hover {
+   opacity: 0.5;
+}
+
+
+.comentariosSti, .PublishBtn {
+  display: inline-flex;
+  background-color: white;
+  margin-bottom: 3%;
+  border-radius: 10px;
+  padding: 3% 4%;
+  width: 100%;
+}
+
+
+.buttonScore{
+  margin: 2% 3% 3% 0%;
+  height: 100px;
+  text-align: center;
+  font-weight: 700;
+ 
+}
+
+.buttonScore button{
+  width: 30px;
+  min-height: 38%;
+  border: none;
+  font-size: 18px;
+  color: hsl(239, 57%, 85%);
+  font-weight: 500;
+  
+}
+.plus {
+  border-top-right-radius: 13px;
+  border-top-left-radius: 13px;
+} /* asi estilizo la parte superior del borde ... colocar los 2... */
+
+.minus {
+  border-bottom-right-radius: 13px;
+  border-bottom-left-radius: 13px;
+} /* asi estilizo la parte inferior del borde ... colocar los 2... */
+
+.buttonScore h2 {
+  width: 26px;
+  color: hsl(238, 40%, 52%);
+  font-size: 18px;
+  background-color: hsl(228, 33%, 97%);
+  border: none;
+}
+
+
+.comentariosTop{
+  display: inline-flex;
+  justify-content: space-between;
+  min-width: 100%;
+}
+
+.comentariosTop div {
+  display: inline-flex;
+  justify-content: space-evenly;
+  
+}
+
+.comentariosTop1 h4{
+  padding-top: 3%;
+  
+}
+
+
+.comentariosTop img {
+  width: 15%;
+}
+
+.fecha, .main p {
+  color: hsl(211, 10%, 45%);
+  font-weight: 500;
+}
+
+.main p{
+  margin-top: 3%;
+  line-height: 0.6cm;
+}
+
+.replyBtn {
+  width: 70px;
+  text-align: right;
+  color: hsl(238, 40%, 52%);
+  font-weight: 600;
+  border: none;
+  background-color: white;
+  font-size: 18px;
+  background: url("/icon-reply.svg");
+  background-repeat:no-repeat;
+  background-position: left;
+}
+
+#you {
+  background: hsl(238, 40%, 52%);
+  color: aliceblue;
+  font-weight: 700;
+  height: 24px;
+  width: 34px;
+  text-align: center;
+}
+
+#modify {
+  width: 40%;
+  margin-top: -4%;
+}
+
+
+
+#modify button, .comentariosTop2 button {
+   border: none;
+   background-color: rgb(248, 248, 248);
+   width: 100px;
+   font-size: 18px;
+   font-weight: 600;
+  }
+
+#delete, .deleteBtn {
+   background: url("/icon-delete.svg");
+   background-repeat:no-repeat;
+   background-position: left;
+   color:  hsl(358, 79%, 66%);
+   background-color: rgb(248, 248, 248);
+}
+
+#edit , .editBtn {
+   background: url("/icon-edit.svg");
+   background-repeat:no-repeat;
+   background-position: left;
+   color: hsl(238, 40%, 52%);
+}
+
+.ReplyComments {
+  padding-left: 10%;
+  min-width: 100%;
+}
+
+
+.PublishBtn{
+  width: 100%;
+  display: inline-flex;
+  justify-content: space-between;
+  
+}
+
+.PublishBtn img{
+  width: 5%;
+}
+
+.PublishBtn textarea {
+  width: 75%;
+  border: none;
+  font-size: 18px;
+}
+
+.PublishBtn button {
+  width: 12%;
+  border-radius: 10px;
+  background-color: hsl(238, 40%, 52%);
+  border: none;
+  color: white;
+}
+
+.span {
+   color: hsl(238, 40%, 52%);
+}
+
+
+.nuevasRep {
+  display: none;
+  width: 100%;
+
+}
+.comentariosUp {
+  width: 100%;
+}
+.comentariosTopR{
+  display: flex;
+  justify-content: space-between;
+  width: 40%;
+}
+
+.comentariosTopR img {
+  width: 15%;
+}
+
+
+.textareaUpdate{
+  width: 100%;
+}
+
+.textareaUpdate textarea {
+  width: 90%;
+  height: 50px;
+}
+
+#dele {
+  margin-top: -5%;
+  width: 150px;
+  margin-left: 40%;
+  background-position: left;
+}
+
+#dele button{
+ border: none;
+ padding: 15% ;
+ font-size: 18px;
+ font-weight: 700;
+}
+
+.posibleReplica {
+  display: none;
+}
+
+.updateBtndiv{
+  width: 100%;
+  display: flex;
+  justify-content: end;
+  padding: 2% 5% 1% 0%;
+}
+
+
+.updateBtn {
+  width: 85px;
+  height: 45px;
+  border-radius: 10px;
+  background-color: hsl(238, 40%, 52%);
+  border: none;
+  color: white;
+
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+
+
+  .main {
+    padding: 3rem 0.7rem;
+  }
+  
+  .comentariosSti {
+    display: inline-flex;
+    flex-direction: column-reverse;
+    margin-bottom: 5%;
+    padding: 3% 2%;
+    
+  }
+  
+  .buttonScore{
+   display: inline-flex;   
+    margin: 5% 3% 3% 0%;
+    height: 40px;
+  }
+
+  .buttonScore h2 {
+    padding-top: 2.5%;
+  }
+
+
+  .buttonScore button{
+    width: 40px;
+    min-height: 38%;
+    font-size: 18px;  
+  }
+
+  .plus {
+    border-top-right-radius: 0px;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 13px;
+    border-top-left-radius: 13px;
+  } /* asi estilizo la parte superior del borde ... colocar los 2... */
+  
+  .minus {
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 13px;
+    border-top-right-radius: 13px;
+  } /* asi estilizo la parte inferior del borde ... colocar los 2... */
+  
+
+  .comentariosTop{
+    display: inline-flex;
+    justify-content: space-around;
+    font-size: 16px;
+  }
+  
+  #replicaC{
+    font-size: 14px;
+  }
+
+  .comentariosTop div {
+    display: inline-flex;
+    justify-content: space-evenly;
+    
+  }
+  
+  .comentariosTop img {
+    width: 15%;
+  }
+  
+  .main p{
+    padding: 0% 5%;
+  }
+  
+  #modify button, .comentariosTop2 button {
+     width: 80px;
+     font-size: 15px
+    }
+  
+  
+  .ReplyComments {
+    padding-left: 10%;
+    min-width: 100%;
+  }
+  
+  
+  .PublishBtn{
+    width: 100%;
+    display: inline-flex;
+    justify-content: space-between;
+    
+  }
+  
+  .PublishBtn img{
+    width: 10%;
+  }
+  
+  .PublishBtn textarea {
+    font-size: 16px;
+  }
+  
+  
+  .span {
+     color: hsl(238, 40%, 52%);
+     font-size: 16px;
+  }
+  
+  
+  .nuevasRep {
+    display: none;
+    width: 100%;
+  
+  }
+  .comentariosUp {
+    width: 100%;
+  }
+  .comentariosTopR{
+    display: flex;
+    justify-content: space-between;
+    width: 40%;
+  }
+  
+  .comentariosTopR img {
+    width: 15%;
+  }
+  
+  
+  .textareaUpdate{
+    width: 100%;
+  }
+  
+  
+  #dele button{
+   border: none;
+   padding: 15% ;
+   font-size: 16px;
+   font-weight: 700;
+  }
+  
+  .posibleReplica {
+    display: none;
+  }
+  
+  .updateBtndiv{
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    padding: 2% 5% 1% 0%;
+  }
+  
+  
+  .updateBtn {
+    width: 85px;
+    height: 45px;
+    border-radius: 10px;
+    background-color: hsl(238, 40%, 52%);
+    border: none;
+    color: white;
+  
+  }
+}
+
+/* Tablet and Smaller Desktop */
+@media (min-width: 701px) and (max-width: 1120px) {
+  .grid {
+    grid-template-columns: repeat(2, 50%);
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .vercelLogo {
+    filter: invert(1);
+  }
+
+  .logo {
+    filter: invert(1) drop-shadow(0 0 0.3rem #ffffff70);
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
